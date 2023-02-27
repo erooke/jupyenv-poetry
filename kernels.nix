@@ -3,6 +3,9 @@
     enable = true;
   };
 
-  kernel.python.python-with-numpy.enable = true;
-  kernel.python.python-with-numpy.projectDir = ./my-custom-python;
+  kernel.python.python-with-numpy = {
+    enable = true;
+    projectDir = ./my-custom-python;
+    overrides = ./overrides.nix;
+  };
 }
