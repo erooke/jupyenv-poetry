@@ -109,6 +109,21 @@
         "type": "github"
       }
     },
+    "flake-utils_4": {
+      "locked": {
+        "lastModified": 1676283394,
+        "narHash": "sha256-XX2f9c3iySLCw54rJ/CZs+ZK6IQy7GXNY4nSOyu2QG4=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "3db36a8b464d0c4532ba1c7dda728f4576d6d073",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
     "gitignore": {
       "flake": false,
       "locked": {
@@ -209,7 +224,9 @@
         "nixpkgs-stable": "nixpkgs-stable",
         "npmlock2nix": "npmlock2nix",
         "opam-nix": "opam-nix",
-        "poetry2nix": "poetry2nix",
+        "poetry2nix": [
+          "poetry2nix"
+        ],
         "pre-commit-hooks": "pre-commit-hooks_2",
         "rust-overlay": "rust-overlay"
       },
@@ -349,6 +366,21 @@
         "type": "github"
       }
     },
+    "nixpkgs_4": {
+      "locked": {
+        "lastModified": 1677468890,
+        "narHash": "sha256-V4MPvt4PKaHSInRLWpaF8ICdC91SH+5bdd0FGxalJIg=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "3f19c04354dec3903f614eae09327a04d297835d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "npmlock2nix": {
       "flake": false,
       "locked": {
@@ -456,21 +488,15 @@
     },
     "poetry2nix": {
       "inputs": {
-        "flake-utils": [
-          "jupyenv",
-          "flake-utils"
-        ],
-        "nixpkgs": [
-          "jupyenv",
-          "nixpkgs"
-        ]
+        "flake-utils": "flake-utils_4",
+        "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1673926875,
-        "narHash": "sha256-QOsT76Al0Igpo0u5vtQJuDSOxrocX3sTD523pLPEklc=",
+        "lastModified": 1677465990,
+        "narHash": "sha256-ghyaxrHMsA3KpUClHEGWuGxJbuf2eP4tdLUxTilxpag=",
         "owner": "nix-community",
         "repo": "poetry2nix",
-        "rev": "a5c454a834cd290dd4d33102ab8b4aa37d850e65",
+        "rev": "7d4a3a6c3675f554106a9867ffb194243aa73e5e",
         "type": "github"
       },
       "original": {
@@ -557,7 +583,8 @@
         "flake-compat": "flake-compat",
         "flake-utils": "flake-utils",
         "jupyenv": "jupyenv",
-        "nixpkgs": "nixpkgs_3"
+        "nixpkgs": "nixpkgs_3",
+        "poetry2nix": "poetry2nix"
       }
     },
     "rust-overlay": {

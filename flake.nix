@@ -12,7 +12,13 @@
   inputs.flake-compat.flake = false;
   inputs.flake-utils.url = "github:numtide/flake-utils";
   inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-  inputs.jupyenv.url = "github:tweag/jupyenv";
+  inputs.jupyenv = {
+    url = "github:tweag/jupyenv";
+    inputs.poetry2nix.follows = "poetry2nix";
+  };
+  inputs.poetry2nix = {
+    url = "github:nix-community/poetry2nix";
+  };
 
   outputs = {
     self,
